@@ -1,0 +1,4820 @@
+*,
+*::before,
+*::after {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+// color
+$row_one: rgb(255, 255, 139);
+$row_two: rgb(255, 208, 122);
+$row_three: rgb(255, 138, 157);
+$row_four: rgb(255, 98, 255);
+$row_five: rgb(205, 98, 255);
+$row_six: rgb(141, 141, 255);
+$row_seven: rgb(167, 255, 252);
+$row_eight: rgb(161, 255, 161);
+$row_vip: rgb(160, 221, 68);
+
+// $row_one: #fcfb3f;
+// $row_two: #fcdb3e;
+// $row_three: #ff3a85;
+// $row_four: #fd6c40;
+// $row_five: #8642f9;
+// $row_six: #5159fc;
+// $row_seven: #60fbdb;
+// $row_eight: #71fd06;
+// $row_vip: #97f616;
+
+.circus_dome_header {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 20px 0;
+    padding: 20px 0;
+
+}
+
+.dome_container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+    margin: 100px auto 300px auto;
+}
+
+.magnifier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    z-index: 99999999;
+    position: relative;
+    margin-top: 20px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+   &_button {
+       border: 1px solid black;
+       border-radius: 5px;
+       cursor: pointer;
+       padding: 10px 15px;
+       margin-left: 10px;       
+       background-color: #fff;
+       z-index: 9999;
+    }
+}
+
+.main_dome {
+    border-radius: 20px;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+.draggable.is-pointer-down {
+    z-index: 2; /* above other draggies */
+  }
+.draggable.is-dragging { opacity: 0.7; }
+.dome {
+    width: 800px;
+    height: 800px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    .center_circul {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        z-index: 1;
+        .vip {
+            position: absolute;
+            width: 40px;
+            height: 16px;
+            border: 1px solid black;
+            font-size: 8px;
+            text-align: center;
+            border-radius: 5px;
+            z-index: 4;
+            cursor: pointer;
+        }
+        .center_circul_one {
+            width: 70%;
+            height: 70%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 100%;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
+
+            .center_circul_two {
+                width: 95%;
+                height: 95%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border-radius: 100%;
+                transform: translate(-50%, -50%);
+                border: 1px solid black;
+
+                .center_circul_text {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .place {
+        border: 1px solid black;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        border-radius: 100%;
+        font-size: 10px;
+        position: absolute;
+        right: -20px;
+        cursor: pointer;
+    }
+    
+    .lateral_fourth_sector {
+        margin: 0 30px 10px 0;
+        position: relative;
+        &_text {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &_first_row {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 50%;
+            height: 50%;
+            .lateral_fourth_sector_first_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0.5px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: 1px;
+                    bottom: 15px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: 2px;
+                    bottom: 30px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: 5px;
+                    bottom: 45px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: 9px;
+                    bottom: 60px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: 15px;
+                    bottom: 74px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: 22px;
+                    bottom: 88px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: 31px;
+                    bottom: 102px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: 40px;
+                    bottom: 115px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: 51px;
+                    bottom: 127px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: 63px;
+                    bottom: 138px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: 76px;
+                    bottom: 148px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: 89px;
+                    bottom: 157px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: 104px;
+                    bottom: 164px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: 119px;
+                    bottom: 170px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: 135px;
+                    bottom: 175px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: 152px;
+                    bottom: 178px;
+                }
+                &_18{
+                    position: absolute;
+                    left: 168px;
+                    bottom: 180px;
+                }
+            }
+        }
+        &_second_row {
+            position: absolute;
+            bottom: 0;
+            left: 43%;
+            width: 57%;
+            height: 57%;
+
+            .lateral_fourth_sector_second_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: 1px;
+                    bottom: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: 3px;
+                    bottom: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: 7px;
+                    bottom: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: 12px;
+                    bottom: 69px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: 18px;
+                    bottom: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: 26px;
+                    bottom: 100px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: 34px;
+                    bottom: 115px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: 45px;
+                    bottom: 129px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: 56px;
+                    bottom: 142px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: 68px;
+                    bottom: 155px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: 82px;
+                    bottom: 166px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: 96px;
+                    bottom: 176px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: 111px;
+                    bottom: 184px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: 127px;
+                    bottom: 191px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: 143px;
+                    bottom: 197px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: 160px;
+                    bottom: 202px;
+                }
+                &_18{
+                    position: absolute;
+                    left: 177px;
+                    bottom: 205px;
+                }
+                &_19{
+                    position: absolute;
+                    left: 194px;
+                    bottom: 208px;
+                }
+            }
+        }
+        &_terium_row {
+            position: absolute;
+            bottom: 0;
+            left: 36%;
+            width: 64%;
+            height: 64%;
+            .lateral_fourth_sector_terium_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: 1px;
+                    bottom: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: 3px;
+                    bottom: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: 6px;
+                    bottom: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: 10px;
+                    bottom: 69px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: 16px;
+                    bottom: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: 23px;
+                    bottom: 101px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: 31px;
+                    bottom: 116px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: 40px;
+                    bottom: 131px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: 50px;
+                    bottom: 145px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: 61px;
+                    bottom: 158px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: 73px;
+                    bottom: 171px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: 86px;
+                    bottom: 182px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: 100px;
+                    bottom: 193px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: 115px;
+                    bottom: 202px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: 132px;
+                    bottom: 211px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: 149px;
+                    bottom: 219px;
+                }
+                &_18{
+                    position: absolute;
+                    left: 166px;
+                    bottom: 224px;
+                }
+                &_19{
+                    position: absolute;
+                    left: 183px;
+                    bottom: 228px;
+                }
+                &_20{
+                    position: absolute;
+                    left: 201px;
+                    bottom: 231px;
+                }
+                &_21{
+                    position: absolute;
+                    left: 219px;
+                    bottom: 233px;
+                }
+            }
+        }
+        &_fourth_row {
+            position: absolute;
+            bottom: 0;
+            left: 29%;
+            width: 71%;
+            height: 70%;
+            .lateral_fourth_sector_fourth_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: 1px;
+                    bottom: 19px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: 3px;
+                    bottom: 36px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: 6px;
+                    bottom: 54px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: 10px;
+                    bottom: 73px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: 16px;
+                    bottom: 91px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: 24px;
+                    bottom: 109px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: 32px;
+                    bottom: 126px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: 42px;
+                    bottom: 142px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: 53px;
+                    bottom: 157px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: 65px;
+                    bottom: 172px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: 79px;
+                    bottom: 186px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: 93px;
+                    bottom: 199px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: 108px;
+                    bottom: 210px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: 123px;
+                    bottom: 220px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: 139px;
+                    bottom: 229px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: 156px;
+                    bottom: 237px;
+                }
+                &_18{
+                    position: absolute;
+                    left: 173px;
+                    bottom: 243px;
+                }
+                &_19{
+                    position: absolute;
+                    left: 191px;
+                    bottom: 249px;
+                }
+                &_20{
+                    position: absolute;
+                    left: 209px;
+                    bottom: 253px;
+                }
+                &_21{
+                    position: absolute;
+                    left: 227px;
+                    bottom: 256px;
+                }
+                &_22{
+                    position: absolute;
+                    left: 245px;
+                    bottom: 258px;
+                }
+            }
+        }
+        &_fifth_row {
+            position: absolute;
+
+            bottom: 0;
+            left: 22%;
+            width: 78%;
+            height: 76%;
+            .lateral_fourth_sector_fifth_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: 2px;
+                    bottom: 20px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: 4px;
+                    bottom: 39px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: 7px;
+                    bottom: 58px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: 11px;
+                    bottom: 76px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: 16px;
+                    bottom: 93px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: 23px;
+                    bottom: 110px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: 31px;
+                    bottom: 126px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: 40px;
+                    bottom: 142px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: 50px;
+                    bottom: 158px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: 62px;
+                    bottom: 174px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: 75px;
+                    bottom: 189px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: 89px;
+                    bottom: 203px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: 103px;
+                    bottom: 216px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: 117px;
+                    bottom: 227px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: 132px;
+                    bottom: 237px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: 147px;
+                    bottom: 246px;
+                }
+                &_18{
+                    position: absolute;
+                    left: 163px;
+                    bottom: 254px;
+                }
+                &_19{
+                    position: absolute;
+                    left: 180px;
+                    bottom: 261px;
+                }
+                &_20{
+                    position: absolute;
+                    left: 198px;
+                    bottom: 267px;
+                }
+                &_21{
+                    position: absolute;
+                    left: 216px;
+                    bottom: 272px;
+                }
+                &_22{
+                    position: absolute;
+                    left: 234px;
+                    bottom: 276px;
+                }
+                &_23{
+                    position: absolute;
+                    left: 253px;
+                    bottom: 279px;
+                }
+                &_24{
+                    position: absolute;
+                    left: 271px;
+                    bottom: 282px;
+                }
+            }
+        }
+        &_sixth_row {
+            position: absolute;
+
+            bottom: 0;
+            left: 15%;
+            width: 85%;
+            height: 82%;
+            .lateral_fourth_sector_sixth_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: 1px;
+                    bottom: 22px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: 3px;
+                    bottom: 42px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: 7px;
+                    bottom: 61px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: 11px;
+                    bottom: 79px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: 17px;
+                    bottom: 97px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: 24px;
+                    bottom: 114px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: 31px;
+                    bottom: 131px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: 40px;
+                    bottom: 147px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: 50px;
+                    bottom: 164px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: 62px;
+                    bottom: 181px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: 74px;
+                    bottom: 196px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: 89px;
+                    bottom: 211px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: 104px;
+                    bottom: 226px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: 118px;
+                    bottom: 237px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: 133px;
+                    bottom: 249px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: 150px;
+                    bottom: 260px;
+                }
+                &_18{
+                    position: absolute;
+                    left: 168px;
+                    bottom: 270px;
+                }
+                &_19{
+                    position: absolute;
+                    left: 185px;
+                    bottom: 278px;
+                }
+                &_20{
+                    position: absolute;
+                    left: 203px;
+                    bottom: 285px;
+                }
+                &_21{
+                    position: absolute;
+                    left: 222px;
+                    bottom: 292px;
+                }
+                &_22{
+                    position: absolute;
+                    left: 241px;
+                    bottom: 297px;
+                }
+                &_23{
+                    position: absolute;
+                    left: 260px;
+                    bottom: 300px;
+                }
+                &_24{
+                    position: absolute;
+                    left: 279px;
+                    bottom: 303px;
+                }
+                &_25{
+                    position: absolute;
+                    left: 297px;
+                    bottom: 306px;
+                }
+            }
+        }
+        &_seventh_row {
+            position: absolute;
+            bottom: 0;
+            left: 8%;
+            width: 92%;
+            height: 87.5%;
+            .lateral_fourth_sector_seventh_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: 1px;
+                    bottom: 22px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: 4px;
+                    bottom: 43px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: 8px;
+                    bottom: 62px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: 12px;
+                    bottom: 81px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: 18px;
+                    bottom: 99px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: 24px;
+                    bottom: 117px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: 32px;
+                    bottom: 133px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: 41px;
+                    bottom: 151px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: 52px;
+                    bottom: 169px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: 64px;
+                    bottom: 187px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: 75px;
+                    bottom: 203px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: 90px;
+                    bottom: 219px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: 105px;
+                    bottom: 234px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: 121px;
+                    bottom: 248px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: 136px;
+                    bottom: 260px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: 152px;
+                    bottom: 271px;
+                }
+                &_18{
+                    position: absolute;
+                    left: 170px;
+                    bottom: 282px;
+                }
+                &_19{
+                    position: absolute;
+                    left: 188px;
+                    bottom: 291px;
+                }
+                &_20{
+                    position: absolute;
+                    left: 206px;
+                    bottom: 300px;
+                }
+                &_21{
+                    position: absolute;
+                    left: 224px;
+                    bottom: 307px;
+                }
+                &_22{
+                    position: absolute;
+                    left: 244px;
+                    bottom: 313px;
+                }
+                &_23{
+                    position: absolute;
+                    left: 264px;
+                    bottom: 318px;
+                }
+                &_24{
+                    position: absolute;
+                    left: 284px;
+                    bottom: 322px;
+                }
+                &_25{
+                    position: absolute;
+                    left: 304px;
+                    bottom: 326px;
+                }
+                &_26{
+                    position: absolute;
+                    left: 323px;
+                    bottom: 328px;
+                }
+            }
+        }
+        &_eighth_row {
+            position: absolute;
+            bottom: 0;
+            left: 1%;
+            width: 99%;
+            height: 93%;
+            .lateral_fourth_sector_eighth_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: 1px;
+                    bottom: 22px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: 4px;
+                    bottom: 43px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: 7px;
+                    bottom: 62px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: 11px;
+                    bottom: 80px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: 17px;
+                    bottom: 97px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: 23px;
+                    bottom: 115px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: 29px;
+                    bottom: 132px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: 38px;
+                    bottom: 151px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: 48px;
+                    bottom: 169px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: 59px;
+                    bottom: 187px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: 71px;
+                    bottom: 203px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: 83px;
+                    bottom: 219px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: 98px;
+                    bottom: 235px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: 113px;
+                    bottom: 251px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: 130px;
+                    bottom: 266px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: 147px;
+                    bottom: 279px;
+                }
+                &_18{
+                    position: absolute;
+                    left: 162px;
+                    bottom: 289px;
+                }
+                &_19{
+                    position: absolute;
+                    left: 178px;
+                    bottom: 299px;
+                }
+                &_20{
+                    position: absolute;
+                    left: 196px;
+                    bottom: 309px;
+                }
+                &_21{
+                    position: absolute;
+                    left: 214px;
+                    bottom: 318px;
+                }
+                &_22{
+                    position: absolute;
+                    left: 232px;
+                    bottom: 325px;
+                }
+                &_23{
+                    position: absolute;
+                    left: 250px;
+                    bottom: 331px;
+                }
+                &_24{
+                    position: absolute;
+                    left: 270px;
+                    bottom: 337px;
+                }
+                &_25{
+                    position: absolute;
+                    left: 290px;
+                    bottom: 341px;
+                }
+                &_26{
+                    position: absolute;
+                    left: 310px;
+                    bottom: 344px;
+                }
+                &_27{
+                    position: absolute;
+                    left: 330px;
+                    bottom: 347px;
+                }
+                &_28{
+                    position: absolute;
+                    left: 349px;
+                    bottom: 349px;
+                }
+            }
+        }
+    }
+    .lateral_first_sector {
+        margin: 0 0 10px 30px;
+        position: relative;
+        &_text {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &_first_row {
+            position: absolute;
+            bottom: 0;
+            left: 45.5%;
+            width: 50%;
+            height: 50%;
+            .lateral_first_sector_first_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0.5px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: -1px;
+                    bottom: 15px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: -2px;
+                    bottom: 30px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: -5px;
+                    bottom: 45px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: -9px;
+                    bottom: 60px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: -15px;
+                    bottom: 74px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: -22px;
+                    bottom: 88px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: -31px;
+                    bottom: 102px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: -40px;
+                    bottom: 115px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: -51px;
+                    bottom: 127px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: -63px;
+                    bottom: 138px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: -76px;
+                    bottom: 148px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: -89px;
+                    bottom: 157px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: -104px;
+                    bottom: 164px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: -119px;
+                    bottom: 170px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: -135px;
+                    bottom: 175px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: -152px;
+                    bottom: 178px;
+                }
+                &_18{
+                    position: absolute;
+                    left: -168px;
+                    bottom: 180px;
+                }
+            }
+        }
+        &_second_row {
+            position: absolute;
+            bottom: 0;
+            left: 52.8%;
+            width: 57%;
+            height: 57%;
+
+            .lateral_first_sector_second_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: -1px;
+                    bottom: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: -3px;
+                    bottom: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: -7px;
+                    bottom: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: -12px;
+                    bottom: 69px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: -18px;
+                    bottom: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: -26px;
+                    bottom: 100px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: -34px;
+                    bottom: 115px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: -45px;
+                    bottom: 129px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: -56px;
+                    bottom: 142px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: -68px;
+                    bottom: 155px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: -82px;
+                    bottom: 166px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: -96px;
+                    bottom: 176px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: -111px;
+                    bottom: 184px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: -127px;
+                    bottom: 191px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: -143px;
+                    bottom: 197px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: -160px;
+                    bottom: 202px;
+                }
+                &_18{
+                    position: absolute;
+                    left: -177px;
+                    bottom: 205px;
+                }
+                &_19{
+                    position: absolute;
+                    left: -194px;
+                    bottom: 208px;
+                }
+            }
+        }
+        &_terium_row {
+            position: absolute;
+            bottom: 0;
+            left: 59.6%;
+            width: 64%;
+            height: 64%;
+            .lateral_first_sector_terium_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: -1px;
+                    bottom: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: -3px;
+                    bottom: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: -6px;
+                    bottom: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: -10px;
+                    bottom: 69px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: -16px;
+                    bottom: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: -23px;
+                    bottom: 101px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: -31px;
+                    bottom: 116px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: -40px;
+                    bottom: 131px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: -50px;
+                    bottom: 145px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: -61px;
+                    bottom: 158px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: -73px;
+                    bottom: 171px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: -86px;
+                    bottom: 182px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: -100px;
+                    bottom: 193px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: -115px;
+                    bottom: 202px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: -132px;
+                    bottom: 211px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: -149px;
+                    bottom: 219px;
+                }
+                &_18{
+                    position: absolute;
+                    left: -166px;
+                    bottom: 224px;
+                }
+                &_19{
+                    position: absolute;
+                    left: -183px;
+                    bottom: 228px;
+                }
+                &_20{
+                    position: absolute;
+                    left: -201px;
+                    bottom: 231px;
+                }
+                &_21{
+                    position: absolute;
+                    left: -219px;
+                    bottom: 233px;
+                }
+            }
+        }
+        &_fourth_row {
+            position: absolute;
+            bottom: 0;
+            left: 66.7%;
+            width: 71%;
+            height: 70%;
+            .lateral_first_sector_fourth_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: -1px;
+                    bottom: 19px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: -3px;
+                    bottom: 36px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: -6px;
+                    bottom: 54px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: -10px;
+                    bottom: 73px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: -16px;
+                    bottom: 91px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: -24px;
+                    bottom: 109px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: -32px;
+                    bottom: 126px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: -42px;
+                    bottom: 142px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: -53px;
+                    bottom: 157px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: -65px;
+                    bottom: 172px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: -79px;
+                    bottom: 186px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: -93px;
+                    bottom: 199px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: -108px;
+                    bottom: 210px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: -123px;
+                    bottom: 220px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: -139px;
+                    bottom: 229px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: -156px;
+                    bottom: 237px;
+                }
+                &_18{
+                    position: absolute;
+                    left: -173px;
+                    bottom: 243px;
+                }
+                &_19{
+                    position: absolute;
+                    left: -191px;
+                    bottom: 249px;
+                }
+                &_20{
+                    position: absolute;
+                    left: -209px;
+                    bottom: 253px;
+                }
+                &_21{
+                    position: absolute;
+                    left: -227px;
+                    bottom: 256px;
+                }
+                &_22{
+                    position: absolute;
+                    left: -245px;
+                    bottom: 258px;
+                }
+            }
+        }
+        &_fifth_row {
+            position: absolute;
+            bottom: 0;
+            left: 73.7%;
+            width: 78%;
+            height: 76%;
+            .lateral_first_sector_fifth_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: -2px;
+                    bottom: 20px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: -4px;
+                    bottom: 39px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: -7px;
+                    bottom: 58px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: -11px;
+                    bottom: 76px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: -16px;
+                    bottom: 93px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: -23px;
+                    bottom: 110px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: -31px;
+                    bottom: 126px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: -40px;
+                    bottom: 142px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: -50px;
+                    bottom: 158px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: -62px;
+                    bottom: 174px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: -75px;
+                    bottom: 189px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: -89px;
+                    bottom: 203px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: -103px;
+                    bottom: 216px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: -117px;
+                    bottom: 227px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: -132px;
+                    bottom: 237px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: -147px;
+                    bottom: 246px;
+                }
+                &_18{
+                    position: absolute;
+                    left: -163px;
+                    bottom: 254px;
+                }
+                &_19{
+                    position: absolute;
+                    left: -180px;
+                    bottom: 261px;
+                }
+                &_20{
+                    position: absolute;
+                    left: -198px;
+                    bottom: 267px;
+                }
+                &_21{
+                    position: absolute;
+                    left: -216px;
+                    bottom: 272px;
+                }
+                &_22{
+                    position: absolute;
+                    left: -234px;
+                    bottom: 276px;
+                }
+                &_23{
+                    position: absolute;
+                    left: -253px;
+                    bottom: 279px;
+                }
+                &_24{
+                    position: absolute;
+                    left: -271px;
+                    bottom: 282px;
+                }
+            }
+        }
+        &_sixth_row {
+            position: absolute;
+            bottom: 0;
+            left: 80.7%;
+            width: 85%;
+            height: 82%;
+            .lateral_first_sector_sixth_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: -1px;
+                    bottom: 22px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: -3px;
+                    bottom: 42px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: -7px;
+                    bottom: 61px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: -11px;
+                    bottom: 79px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: -17px;
+                    bottom: 97px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: -24px;
+                    bottom: 114px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: -31px;
+                    bottom: 131px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: -40px;
+                    bottom: 147px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: -50px;
+                    bottom: 164px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: -62px;
+                    bottom: 181px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: -74px;
+                    bottom: 196px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: -89px;
+                    bottom: 211px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: -104px;
+                    bottom: 226px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: -118px;
+                    bottom: 237px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: -133px;
+                    bottom: 249px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: -150px;
+                    bottom: 260px;
+                }
+                &_18{
+                    position: absolute;
+                    left: -168px;
+                    bottom: 270px;
+                }
+                &_19{
+                    position: absolute;
+                    left: -185px;
+                    bottom: 278px;
+                }
+                &_20{
+                    position: absolute;
+                    left: -203px;
+                    bottom: 285px;
+                }
+                &_21{
+                    position: absolute;
+                    left: -222px;
+                    bottom: 292px;
+                }
+                &_22{
+                    position: absolute;
+                    left: -241px;
+                    bottom: 297px;
+                }
+                &_23{
+                    position: absolute;
+                    left: -260px;
+                    bottom: 300px;
+                }
+                &_24{
+                    position: absolute;
+                    left: -279px;
+                    bottom: 303px;
+                }
+                &_25{
+                    position: absolute;
+                    left: -297px;
+                    bottom: 306px;
+                }
+            }
+        }
+        &_seventh_row {
+            position: absolute;
+            bottom: 0;
+            left: 87.8%;
+            width: 92%;
+            height: 87.5%;
+            .lateral_first_sector_seventh_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: -1px;
+                    bottom: 22px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: -4px;
+                    bottom: 43px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: -8px;
+                    bottom: 62px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: -12px;
+                    bottom: 81px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: -18px;
+                    bottom: 99px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: -24px;
+                    bottom: 117px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: -32px;
+                    bottom: 133px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: -41px;
+                    bottom: 151px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: -52px;
+                    bottom: 169px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: -64px;
+                    bottom: 187px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: -75px;
+                    bottom: 203px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: -90px;
+                    bottom: 219px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: -105px;
+                    bottom: 234px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: -121px;
+                    bottom: 248px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: -136px;
+                    bottom: 260px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: -152px;
+                    bottom: 271px;
+                }
+                &_18{
+                    position: absolute;
+                    left: -170px;
+                    bottom: 282px;
+                }
+                &_19{
+                    position: absolute;
+                    left: -188px;
+                    bottom: 291px;
+                }
+                &_20{
+                    position: absolute;
+                    left: -206px;
+                    bottom: 300px;
+                }
+                &_21{
+                    position: absolute;
+                    left: -224px;
+                    bottom: 307px;
+                }
+                &_22{
+                    position: absolute;
+                    left: -244px;
+                    bottom: 313px;
+                }
+                &_23{
+                    position: absolute;
+                    left: -264px;
+                    bottom: 318px;
+                }
+                &_24{
+                    position: absolute;
+                    left: -284px;
+                    bottom: 322px;
+                }
+                &_25{
+                    position: absolute;
+                    left: -304px;
+                    bottom: 326px;
+                }
+                &_26{
+                    position: absolute;
+                    left: -323px;
+                    bottom: 328px;
+                }
+            }
+        }
+        &_eighth_row {
+            position: absolute;
+            bottom: 0;
+            left: 94.9%;
+            width: 99%;
+            height: 93%;
+            .lateral_first_sector_eighth_row_place {
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 1px;
+                }
+                &_2 {
+                    position: absolute;
+                    left: -1px;
+                    bottom: 22px;
+                }
+                &_3 {
+                    position: absolute;
+                    left: -4px;
+                    bottom: 43px;
+                }
+                &_4 {
+                    position: absolute;
+                    left: -7px;
+                    bottom: 62px;
+                }
+                &_5 {
+                    position: absolute;
+                    left: -11px;
+                    bottom: 80px;
+                }
+                &_6 {
+                    position: absolute;
+                    left: -17px;
+                    bottom: 97px;
+                }
+                &_7 {
+                    position: absolute;
+                    left: -23px;
+                    bottom: 115px;
+                }
+                &_8 {
+                    position: absolute;
+                    left: -29px;
+                    bottom: 132px;
+                }
+                &_9 {
+                    position: absolute;
+                    left: -38px;
+                    bottom: 151px;
+                }
+                &_10 {
+                    position: absolute;
+                    left: -48px;
+                    bottom: 169px;
+                }
+                &_11 {
+                    position: absolute;
+                    left: -59px;
+                    bottom: 187px;
+                }
+                &_12 {
+                    position: absolute;
+                    left: -71px;
+                    bottom: 203px;
+                }
+                &_13 {
+                    position: absolute;
+                    left: -83px;
+                    bottom: 219px;
+                }
+                &_14 {
+                    position: absolute;
+                    left: -98px;
+                    bottom: 235px;
+                }
+                &_15 {
+                    position: absolute;
+                    left: -113px;
+                    bottom: 251px;
+                }
+                &_16 {
+                    position: absolute;
+                    left: -130px;
+                    bottom: 266px;
+                }
+                &_17 {
+                    position: absolute;
+                    left: -147px;
+                    bottom: 279px;
+                }
+                &_18{
+                    position: absolute;
+                    left: -162px;
+                    bottom: 289px;
+                }
+                &_19{
+                    position: absolute;
+                    left: -178px;
+                    bottom: 299px;
+                }
+                &_20{
+                    position: absolute;
+                    left: -196px;
+                    bottom: 309px;
+                }
+                &_21{
+                    position: absolute;
+                    left: -214px;
+                    bottom: 318px;
+                }
+                &_22{
+                    position: absolute;
+                    left: -232px;
+                    bottom: 325px;
+                }
+                &_23{
+                    position: absolute;
+                    left: -250px;
+                    bottom: 331px;
+                }
+                &_24{
+                    position: absolute;
+                    left: -270px;
+                    bottom: 337px;
+                }
+                &_25{
+                    position: absolute;
+                    left: -290px;
+                    bottom: 341px;
+                }
+                &_26{
+                    position: absolute;
+                    left: -310px;
+                    bottom: 344px;
+                }
+                &_27{
+                    position: absolute;
+                    left: -330px;
+                    bottom: 347px;
+                }
+                &_28{
+                    position: absolute;
+                    left: -349px;
+                    bottom: 349px;
+                }
+            }
+        }
+    }
+    .central_tritium_sector {
+        margin: 10px 30px 0 0;
+        position: relative;
+        &_text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        &_first_row {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            right: 0;
+            .central_tritium_sector_first_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 14px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 3px;
+                    right: 28px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 7px;
+                    right: 42px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 11px;
+                    right: 55px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 16px;
+                    right: 68px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 23px;
+                    right: 80px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 92px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 38px;
+                    right: 103px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 47px;
+                    right: 113px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 57px;
+                    right: 123px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 68px;
+                    right: 132px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 80px;
+                    right: 140px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 92px;
+                    right: 147px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 105px;
+                    right: 153px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 118px;
+                    right: 159px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 132px;
+                    right: 163px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 147px;
+                    right: 166px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 162px;
+                    right: 168px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 177px;
+                    right: 170px;
+                }
+            }
+        }
+        &_second_row {
+            position: absolute;
+            width: 57%;
+            height: 57%;
+            right: 0;
+            .central_tritium_sector_second_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 15px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 3px;
+                    right: 30px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 6px;
+                    right: 45px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 11px;
+                    right: 60px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 17px;
+                    right: 75px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 24px;
+                    right: 89px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 32px;
+                    right: 103px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 42px;
+                    right: 116px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 52px;
+                    right: 128px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 63px;
+                    right: 140px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 75px;
+                    right: 150px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 88px;
+                    right: 159px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 101px;
+                    right: 168px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 115px;
+                    right: 175px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 129px;
+                    right: 181px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 144px;
+                    right: 186px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 159px;
+                    right: 190px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 174px;
+                    right: 193px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 189px;
+                    right: 195px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 204px;
+                    right: 196px;
+                }
+            }
+        }
+        &_terium_row {
+            position: absolute;
+            width: 64%;
+            height: 64%;
+            right: 0;
+            .central_tritium_sector_terium_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 17px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 4px;
+                    right: 34px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 50px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 13px;
+                    right: 66px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 19px;
+                    right: 82px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 26px;
+                    right: 97px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 34px;
+                    right: 112px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 43px;
+                    right: 126px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 53px;
+                    right: 139px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 64px;
+                    right: 151px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 76px;
+                    right: 162px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 88px;
+                    right: 172px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 101px;
+                    right: 181px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 114px;
+                    right: 189px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 127px;
+                    right: 196px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 141px;
+                    right: 203px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 156px;
+                    right: 208px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 171px;
+                    right: 213px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 186px;
+                    right: 216px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 201px;
+                    right: 219px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 216px;
+                    right: 220px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 231px;
+                    right: 221px;
+                }
+            }
+        }
+        &_fourth_row {
+            position: absolute;
+            width: 71%;
+            height: 71%;
+            right: 0;
+            .central_tritium_sector_fourth_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 3px;
+                    right: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 6px;
+                    right: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 11px;
+                    right: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 16px;
+                    right: 84px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 23px;
+                    right: 100px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 31px;
+                    right: 115px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 40px;
+                    right: 129px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 50px;
+                    right: 143px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 60px;
+                    right: 156px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 71px;
+                    right: 168px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 83px;
+                    right: 180px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 96px;
+                    right: 191px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 110px;
+                    right: 201px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 124px;
+                    right: 210px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 138px;
+                    right: 218px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 153px;
+                    right: 225px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 168px;
+                    right: 231px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 183px;
+                    right: 236px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 198px;
+                    right: 240px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 213px;
+                    right: 243px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 228px;
+                    right: 245px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 243px;
+                    right: 246px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 258px;
+                    right: 247px;
+                }
+            }
+        }
+        &_fifth_row {
+            position: absolute;
+            width: 78%;
+            height: 78%;
+            right: 0;
+            .central_tritium_sector_fifth_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 3px;
+                    right: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 6px;
+                    right: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 15px;
+                    right: 84px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 21px;
+                    right: 100px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 28px;
+                    right: 116px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 37px;
+                    right: 131px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 46px;
+                    right: 146px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 56px;
+                    right: 160.5px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 67px;
+                    right: 174px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 79px;
+                    right: 187px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 92px;
+                    right: 200px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 106px;
+                    right: 212px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 121px;
+                    right: 222px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 136px;
+                    right: 232px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 151px;
+                    right: 241px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 167px;
+                    right: 249px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 183.5px;
+                    right: 255px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 200px;
+                    right: 261px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 217px;
+                    right: 265px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 234px;
+                    right: 268px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 251px;
+                    right: 271px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 268px;
+                    right: 272px;
+                }
+                &_26{
+                    position: absolute;
+                    bottom: 285px;
+                    right: 273px;
+                }
+            }
+        }
+        &_sixth_row {
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            right: 0;
+            .central_tritium_sector_sixth_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 2.5px;
+                    right: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 9px;
+                    right: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 13.5px;
+                    right: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 19px;
+                    right: 101px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 26px;
+                    right: 117px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 34px;
+                    right: 134px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 43px;
+                    right: 150px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 53px;
+                    right: 165px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 64px;
+                    right: 179px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 75px;
+                    right: 194px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 88px;
+                    right: 207px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 102px;
+                    right: 220px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 116px;
+                    right: 232px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 131px;
+                    right: 243px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 146px;
+                    right: 253px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 162px;
+                    right: 262px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 178.5px;
+                    right: 270px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 195px;
+                    right: 277px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 212px;
+                    right: 283px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 229px;
+                    right: 288px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 246px;
+                    right: 292px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 263px;
+                    right: 295px;
+                }
+                &_26{
+                    position: absolute;
+                    bottom: 280px;
+                    right: 297px;
+                }
+                &_27{
+                    position: absolute;
+                    bottom: 297px;
+                    right: 298px;
+                }
+                &_28{
+                    position: absolute;
+                    bottom: 313px;
+                    right: 299px;
+                }
+            }
+        }
+        &_seventh_row {
+            position: absolute;
+            width: 92%;
+            height: 92%;
+            right: 0;
+            .central_tritium_sector_seventh_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 2px;
+                    right: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 4px;
+                    right: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 8px;
+                    right: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 12px;
+                    right: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 18px;
+                    right: 101px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 24px;
+                    right: 117px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 32px;
+                    right: 134px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 40px;
+                    right: 150px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 49px;
+                    right: 165px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 59px;
+                    right: 180px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 71px;
+                    right: 196px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 84px;
+                    right: 212px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 98px;
+                    right: 227px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 113px;
+                    right: 241px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 129px;
+                    right: 254px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 146px;
+                    right: 266px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 163px;
+                    right: 277px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 181px;
+                    right: 287px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 198px;
+                    right: 295px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 215px;
+                    right: 302px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 232px;
+                    right: 308px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 250px;
+                    right: 313px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 268px;
+                    right: 317px;
+                }
+                &_26{
+                    position: absolute;
+                    bottom: 286px;
+                    right: 320px;
+                }
+                &_27{
+                    position: absolute;
+                    bottom: 304px;
+                    right: 322px;
+                }
+                &_28{
+                    position: absolute;
+                    bottom: 322px;
+                    right: 323.5px;
+                }
+                &_29{
+                    position: absolute;
+                    bottom: 340px;
+                    right: 325px;
+                }
+            }
+        }
+        &_eighth_row {
+            position: absolute;
+            width: 99%;
+            height: 99%;
+            right: 0;
+            .central_tritium_sector_eighth_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 2px;
+                    right: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 4px;
+                    right: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 7px;
+                    right: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 11px;
+                    right: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 16px;
+                    right: 101px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 22px;
+                    right: 118px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 29px;
+                    right: 135px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 37px;
+                    right: 152px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 46px;
+                    right: 168px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 55px;
+                    right: 183px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 65px;
+                    right: 198px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 76px;
+                    right: 214px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 88px;
+                    right: 228px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 102px;
+                    right: 243px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 118px;
+                    right: 258px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 134px;
+                    right: 272px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 152px;
+                    right: 286px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 169px;
+                    right: 297px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 186px;
+                    right: 307px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 204px;
+                    right: 316px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 222px;
+                    right: 324px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 241px;
+                    right: 331px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 259px;
+                    right: 337px;
+                }
+                &_26{
+                    position: absolute;
+                    bottom: 277px;
+                    right: 341px;
+                }
+                &_27{
+                    position: absolute;
+                    bottom: 295px;
+                    right: 345px;
+                }
+                &_28{
+                    position: absolute;
+                    bottom: 313px;
+                    right: 348px;
+                }
+                &_29{
+                    position: absolute;
+                    bottom: 331px;
+                    right: 349px;
+                }
+                &_30{
+                    position: absolute;
+                    bottom: 349px;
+                    right: 350px;
+                }
+                &_31{
+                    position: absolute;
+                    bottom: 367px;
+                    right: 351px;
+                }
+            }
+        }
+    }
+    .central_second_sector {
+        margin: 10px 0 0 30px;
+        position: relative;
+        &_text {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        &_first_row {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 0;
+            .central_second_sector_first_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 14px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 3px;
+                    left: 28px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 7px;
+                    left: 42px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 11px;
+                    left: 55px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 16px;
+                    left: 68px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 23px;
+                    left: 80px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 92px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 38px;
+                    left: 103px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 47px;
+                    left: 113px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 57px;
+                    left: 123px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 68px;
+                    left: 132px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 80px;
+                    left: 140px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 92px;
+                    left: 147px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 105px;
+                    left: 153px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 118px;
+                    left: 159px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 132px;
+                    left: 163px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 147px;
+                    left: 166px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 162px;
+                    left: 168px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 177px;
+                    left: 170px;
+                }
+            }
+        }
+        &_second_row {
+            position: absolute;
+            width: 57%;
+            height: 57%;
+            left: 0;
+            .central_second_sector_second_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 15px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 3px;
+                    left: 30px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 6px;
+                    left: 45px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 11px;
+                    left: 60px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 17px;
+                    left: 75px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 24px;
+                    left: 89px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 32px;
+                    left: 103px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 42px;
+                    left: 116px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 52px;
+                    left: 128px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 63px;
+                    left: 140px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 75px;
+                    left: 150px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 88px;
+                    left: 159px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 101px;
+                    left: 168px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 115px;
+                    left: 175px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 129px;
+                    left: 181px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 144px;
+                    left: 186px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 159px;
+                    left: 190px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 174px;
+                    left: 193px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 189px;
+                    left: 195px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 204px;
+                    left: 196px;
+                }
+            }
+        }
+        &_terium_row {
+            position: absolute;
+            width: 64%;
+            height: 64%;
+            left: 0;
+            .central_second_sector_terium_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 17px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 4px;
+                    left: 34px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 8px;
+                    left: 50px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 13px;
+                    left: 66px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 19px;
+                    left: 82px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 26px;
+                    left: 97px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 34px;
+                    left: 112px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 43px;
+                    left: 126px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 53px;
+                    left: 139px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 64px;
+                    left: 151px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 76px;
+                    left: 162px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 88px;
+                    left: 172px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 101px;
+                    left: 181px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 114px;
+                    left: 189px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 127px;
+                    left: 196px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 141px;
+                    left: 203px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 156px;
+                    left: 208px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 171px;
+                    left: 213px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 186px;
+                    left: 216px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 201px;
+                    left: 219px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 216px;
+                    left: 220px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 231px;
+                    left: 221px;
+                }
+            }
+        }
+        &_fourth_row {
+            position: absolute;
+            width: 71%;
+            height: 71%;
+            left: 0;
+            .central_second_sector_fourth_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 3px;
+                    left: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 6px;
+                    left: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 11px;
+                    left: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 16px;
+                    left: 84px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 23px;
+                    left: 100px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 31px;
+                    left: 115px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 129px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 50px;
+                    left: 143px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 60px;
+                    left: 156px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 71px;
+                    left: 168px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 83px;
+                    left: 180px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 96px;
+                    left: 191px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 110px;
+                    left: 201px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 124px;
+                    left: 210px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 138px;
+                    left: 218px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 153px;
+                    left: 225px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 168px;
+                    left: 231px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 183px;
+                    left: 236px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 198px;
+                    left: 240px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 213px;
+                    left: 243px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 228px;
+                    left: 245px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 243px;
+                    left: 246px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 258px;
+                    left: 247px;
+                }
+            }
+        }
+        &_fifth_row {
+            position: absolute;
+            width: 78%;
+            height: 78%;
+            left: 0;
+            .central_second_sector_fifth_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 3px;
+                    left: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 6px;
+                    left: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 84px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 21px;
+                    left: 100px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 28px;
+                    left: 116px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 37px;
+                    left: 131px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 46px;
+                    left: 146px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 56px;
+                    left: 160.5px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 67px;
+                    left: 174px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 79px;
+                    left: 187px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 92px;
+                    left: 200px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 106px;
+                    left: 212px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 121px;
+                    left: 222px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 136px;
+                    left: 232px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 151px;
+                    left: 241px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 167px;
+                    left: 249px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 183.5px;
+                    left: 255px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 200px;
+                    left: 261px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 217px;
+                    left: 265px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 234px;
+                    left: 268px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 251px;
+                    left: 271px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 268px;
+                    left: 272px;
+                }
+                &_26{
+                    position: absolute;
+                    bottom: 285px;
+                    left: 273px;
+                }
+            }
+        }
+        &_sixth_row {
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            left: 0;
+            .central_second_sector_sixth_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 2.5px;
+                    left: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 5px;
+                    left: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 9px;
+                    left: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 13.5px;
+                    left: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 19px;
+                    left: 101px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 26px;
+                    left: 117px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 34px;
+                    left: 134px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 43px;
+                    left: 150px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 53px;
+                    left: 165px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 64px;
+                    left: 179px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 75px;
+                    left: 194px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 88px;
+                    left: 207px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 102px;
+                    left: 220px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 116px;
+                    left: 232px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 131px;
+                    left: 243px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 146px;
+                    left: 253px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 162px;
+                    left: 262px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 178.5px;
+                    left: 270px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 195px;
+                    left: 277px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 212px;
+                    left: 283px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 229px;
+                    left: 288px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 246px;
+                    left: 292px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 263px;
+                    left: 295px;
+                }
+                &_26{
+                    position: absolute;
+                    bottom: 280px;
+                    left: 297px;
+                }
+                &_27{
+                    position: absolute;
+                    bottom: 297px;
+                    left: 298px;
+                }
+                &_28{
+                    position: absolute;
+                    bottom: 313px;
+                    left: 299px;
+                }
+            }
+        }
+        &_seventh_row {
+            position: absolute;
+            width: 92%;
+            height: 92%;
+            left: 0;
+            .central_second_sector_seventh_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 2px;
+                    left: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 4px;
+                    left: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 8px;
+                    left: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 12px;
+                    left: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 18px;
+                    left: 101px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 24px;
+                    left: 117px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 32px;
+                    left: 134px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 150px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 49px;
+                    left: 165px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 59px;
+                    left: 180px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 71px;
+                    left: 196px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 84px;
+                    left: 212px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 98px;
+                    left: 227px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 113px;
+                    left: 241px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 129px;
+                    left: 254px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 146px;
+                    left: 266px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 163px;
+                    left: 277px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 181px;
+                    left: 287px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 198px;
+                    left: 295px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 215px;
+                    left: 302px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 232px;
+                    left: 308px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 250px;
+                    left: 313px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 268px;
+                    left: 317px;
+                }
+                &_26{
+                    position: absolute;
+                    bottom: 286px;
+                    left: 320px;
+                }
+                &_27{
+                    position: absolute;
+                    bottom: 304px;
+                    left: 322px;
+                }
+                &_28{
+                    position: absolute;
+                    bottom: 322px;
+                    left: 323.5px;
+                }
+                &_29{
+                    position: absolute;
+                    bottom: 340px;
+                    left: 325px;
+                }
+            }
+        }
+        &_eighth_row {
+            position: absolute;
+            width: 99%;
+            height: 99%;
+            left: 0;
+            .central_second_sector_eighth_row_place {
+                
+                &_1 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                }
+                &_2 {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 18px;
+                }
+                &_3 {
+                    position: absolute;
+                    bottom: 2px;
+                    left: 35px;
+                }
+                &_4 {
+                    position: absolute;
+                    bottom: 4px;
+                    left: 52px;
+                }
+                &_5 {
+                    position: absolute;
+                    bottom: 7px;
+                    left: 68px;
+                }
+                &_6 {
+                    position: absolute;
+                    bottom: 11px;
+                    left: 85px;
+                }
+                &_7 {
+                    position: absolute;
+                    bottom: 16px;
+                    left: 101px;
+                }
+                &_8 {
+                    position: absolute;
+                    bottom: 22px;
+                    left: 118px;
+                }
+                &_9 {
+                    position: absolute;
+                    bottom: 29px;
+                    left: 135px;
+                }
+                &_10 {
+                    position: absolute;
+                    bottom: 37px;
+                    left: 152px;
+                }
+                &_11 {
+                    position: absolute;
+                    bottom: 46px;
+                    left: 168px;
+                }
+                &_12 {
+                    position: absolute;
+                    bottom: 55px;
+                    left: 183px;
+                }
+                &_13 {
+                    position: absolute;
+                    bottom: 65px;
+                    left: 198px;
+                }
+                &_14 {
+                    position: absolute;
+                    bottom: 76px;
+                    left: 214px;
+                }
+                &_15 {
+                    position: absolute;
+                    bottom: 88px;
+                    left: 228px;
+                }
+                &_16 {
+                    position: absolute;
+                    bottom: 102px;
+                    left: 243px;
+                }
+                &_17 {
+                    position: absolute;
+                    bottom: 118px;
+                    left: 258px;
+                }
+                &_18{
+                    position: absolute;
+                    bottom: 134px;
+                    left: 272px;
+                }
+                &_19{
+                    position: absolute;
+                    bottom: 152px;
+                    left: 286px;
+                }
+                &_20{
+                    position: absolute;
+                    bottom: 169px;
+                    left: 297px;
+                }
+                &_21{
+                    position: absolute;
+                    bottom: 186px;
+                    left: 307px;
+                }
+                &_22{
+                    position: absolute;
+                    bottom: 204px;
+                    left: 316px;
+                }
+                &_23{
+                    position: absolute;
+                    bottom: 222px;
+                    left: 324px;
+                }
+                &_24{
+                    position: absolute;
+                    bottom: 241px;
+                    left: 331px;
+                }
+                &_25{
+                    position: absolute;
+                    bottom: 259px;
+                    left: 337px;
+                }
+                &_26{
+                    position: absolute;
+                    bottom: 277px;
+                    left: 341px;
+                }
+                &_27{
+                    position: absolute;
+                    bottom: 295px;
+                    left: 345px;
+                }
+                &_28{
+                    position: absolute;
+                    bottom: 313px;
+                    left: 348px;
+                }
+                &_29{
+                    position: absolute;
+                    bottom: 331px;
+                    left: 349px;
+                }
+                &_30{
+                    position: absolute;
+                    bottom: 349px;
+                    left: 350px;
+                }
+                &_31{
+                    position: absolute;
+                    bottom: 367px;
+                    left: 351px;
+                }
+            }
+        }
+    }
+}
+
+.passage {
+    position: absolute;
+
+    &_top {
+        top: 8px;
+        height: 25%;
+        width: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        &_left {
+            position: relative;
+            height: 100%;
+            width: 10px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            padding-top: 5px;
+            text-align: center;
+            :first-child {
+                margin-top:8px;
+            }
+            p {
+                margin: 4px 0;
+                font-size: 12px;
+                line-height: 20px;
+                
+            }
+
+            &::before {
+                content: 'проход';
+                position: absolute;
+                transform: rotate(-90deg);
+                left: 0;
+                top: -20px;
+                width: 10px;
+                font-size: 12px;
+            }
+        }
+        &_text {
+            width: 34px;
+            padding-top: 40px;
+            
+            p  {
+                display: flex;
+                text-align: right;
+                transform: rotate(-90deg);
+                font-size: 15px;
+            }
+        }
+        &_right {
+            position: relative;
+            height: 100%;
+            width: 10px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            padding-top: 5px;
+            text-align: center;
+            :first-child {
+                margin-top:8px;
+            }
+            p {
+                margin: 4px 0;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            &::before {
+                content: 'проход';
+                position: absolute;
+                transform: rotate(-90deg);
+                left: 0;
+                top: -20px;
+                width: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+    &_bottom {
+        
+        height: 25%;
+        width: 60px;
+        left: 50%;
+        bottom: 4px;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        &_left {
+            position: relative;
+            height: 100%;
+            width: 10px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            text-align: center;
+            :first-child {
+                margin-top:-8px;
+            }
+            p {
+                margin: 7.5px 0;
+                font-size: 12px;
+                line-height: 20px;
+                
+            }
+
+            &::before {
+                content: 'проход';
+                position: absolute;
+                transform: rotate(-90deg);
+                left: 0;
+                bottom: -50px;
+                width: 10px;
+                font-size: 12px;
+            }
+        }
+        &_text {
+            width: 34px;
+            padding-top: 150px;
+            p {
+                transform: rotate(-90deg);
+                font-size: 15px;
+            }
+        }
+        &_right {
+            position: relative;
+            height: 100%;
+            width: 10px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            text-align: center;
+            :first-child {
+                margin-top:-8px;
+            }
+            p {
+                margin: 7.5px 0;
+                font-size: 12px;
+                line-height: 20px;
+                
+            }
+
+            &::before {
+                content: 'проход';
+                position: absolute;
+                transform: rotate(-90deg);
+                left: 0;
+                bottom: -50px;
+                width: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+    &_left {
+        height: 20px;
+        width: 25%;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+        p {
+            margin: 0 6px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        &::before {
+            content: 'проход';
+            position: absolute;
+            left: -50px;
+            width: 10px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        
+    }
+    &_right {
+        height: 20px;
+        width: 25%;
+        right: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        
+        p {
+            margin: 0 6px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        &::before {
+            content: 'проход';
+            position: absolute;
+            right: -10px;
+            width: 10px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}
+
+.vip {
+ &_first_bed_1 {
+     right: 20%;
+     top: -10%;
+     transform: rotate(20deg);
+     
+ }
+ &_second_bed_2 {
+    right: -3%;
+    top: 6%;
+    transform: rotate(50deg);
+ }
+ &_terium_bed_3 {
+    right: -15%;
+    top: 28%;
+    transform: rotate(70deg);
+ }
+ &_fourth_bed_4 {
+    right: -15%;
+    bottom: 28%;
+    transform: rotate(-70deg);
+ }
+ &_fifth_bed_5 {
+    right: -3%;
+    bottom: 6%;
+    transform: rotate(-50deg);
+ }
+ &_sixth_bed_6 {
+    right: 20%;
+    bottom: -10%;
+    transform: rotate(-20deg);
+ }
+ &_seventh_bed_7 {
+    right: 50%;
+    bottom: -14%;
+    transform: translateX(50%);
+ }
+ &_eighth_bed_8 {
+    left: 20%;
+    bottom: -10%;
+    transform: rotate(20deg);
+ }
+ &_nine_bed_9 {
+    left: -3%;
+    bottom: 6%;
+    transform: rotate(50deg);
+ }
+ &_ten_bed_10 {
+    left: -15%;
+    bottom: 28%;
+    transform: rotate(70deg);
+ }
+ &_eleven_bed_11 {
+    left: -15%;
+    top: 28%;
+    transform: rotate(-70deg);
+ }
+ &_twelve_bed_12 {
+    left: -3%;
+    top: 6%;
+    transform: rotate(-50deg);
+ }
+ &_thirteen_bed_13 {
+    left: 20%;
+    top: -10%;
+    transform: rotate(-20deg);
+ }
+}
+
+.lateral_fourth_sector_first_row .place,
+.lateral_first_sector_first_row .place,
+.central_tritium_sector_first_row .place,
+.central_second_sector_first_row .place {
+    background-color: $row_one;
+
+}
+.lateral_fourth_sector_second_row .place,
+.lateral_first_sector_second_row .place,
+.central_tritium_sector_second_row .place,
+.central_second_sector_second_row .place {
+    background-color: $row_two;
+}
+.lateral_fourth_sector_terium_row .place,
+.lateral_first_sector_terium_row .place,
+.central_tritium_sector_terium_row .place,
+.central_second_sector_terium_row .place {
+    background-color: $row_three;
+}
+.lateral_fourth_sector_fourth_row .place,
+.lateral_first_sector_fourth_row .place,
+.central_tritium_sector_fourth_row .place,
+.central_second_sector_fourth_row .place {
+    background-color: $row_four;
+}
+.lateral_fourth_sector_fifth_row .place,
+.lateral_first_sector_fifth_row .place,
+.central_tritium_sector_fifth_row .place,
+.central_second_sector_fifth_row .place {
+    background-color: $row_five;
+}
+.lateral_fourth_sector_sixth_row .place,
+.lateral_first_sector_sixth_row .place,
+.central_tritium_sector_sixth_row .place,
+.central_second_sector_sixth_row .place {
+    background-color: $row_six;
+}
+.lateral_fourth_sector_seventh_row .place,
+.lateral_first_sector_seventh_row .place,
+.central_tritium_sector_seventh_row .place,
+.central_second_sector_seventh_row .place {
+    background-color: $row_seven;
+}
+.lateral_fourth_sector_eighth_row .place,
+.lateral_first_sector_eighth_row .place,
+.central_tritium_sector_eighth_row .place,
+.central_second_sector_eighth_row .place {
+    background-color: $row_eight;
+}
+
+.center_circul_one .vip {
+    background-color: $row_vip;
+}
+
+.place {
+    z-index: 200;
+}
+.checkPlace {
+    width: 140px;
+    height: 180px;
+    position: absolute ;
+    bottom: 200%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    background: rgba(93, 93, 93, 0.938) !important;
+}
+.checkPlaceRow {
+    &1 {
+        color: $row_one;
+        box-shadow: inset 2px 2px 5px $row_one, 1px 1px 5px $row_one;
+    }
+    &2 {
+        color: $row_two;
+        box-shadow: inset 2px 2px 5px $row_two, 1px 1px 5px $row_two;
+    }
+    &3 {
+        color: $row_three;
+        box-shadow: inset 2px 2px 5px $row_three, 1px 1px 5px $row_three;
+    }
+    &4 {
+        color: $row_four;
+        box-shadow: inset 2px 2px 5px $row_four, 1px 1px 5px $row_four;
+    }
+    &5 {
+        color: $row_five;
+        box-shadow: inset 2px 2px 5px $row_five, 1px 1px 5px $row_five;
+    }
+    &6 {
+        color: $row_six;
+        box-shadow: inset 2px 2px 5px $row_six, 1px 1px 5px $row_six;
+    }
+    &7 {
+        color: $row_seven;
+        box-shadow: inset 2px 2px 5px $row_seven, 1px 1px 5px $row_seven;
+    }
+    &8 {
+        color: $row_eight;
+        box-shadow: inset 2px 2px 5px $row_eight, 1px 1px 5px $row_eight;
+    }
+    
+}
+
+.checkPlaceVip {
+    width: 100%;
+    height: 100%;
+    position: absolute ;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background: rgba(93, 93, 93, 0.938) !important;
+    color: $row_vip;
+    box-shadow: inset 2px 2px 5px $row_vip, 1px 1px 5px $row_vip;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .dome {
+        transform:scale(0.8);
+    }
+}
+@media screen and (max-width: 1204px) {
+    .main_dome {
+        top: -15%;
+        left: -30%;
+        transform: '';
+    }
+    .dome {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50% scale(0.9));
+    }
+}
+@media screen and (max-width: 540px) {
+    
+    .dome {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+@media screen and (max-width: 475px) {
+    .main_dome {
+        top: -25%;
+        left: -45%;
+        transform: '';
+    }
+    .dome {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+}
+@media screen and (max-width: 375px) {
+    .main_dome {
+        top: -25%;
+        left: -55%;
+        transform: '';
+    }
+    .dome {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+}
+@media screen and (max-width: 320px) {
+    .main_dome {
+        top: -25%;
+        left: -70%;
+        transform: '';
+    }
+    .dome {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+}
+@media screen and (max-width: 280px) {
+    .main_dome {
+        top: -25%;
+        left: -92%;
+        transform: '';
+    }
+    .dome {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+}

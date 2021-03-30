@@ -1,0 +1,349 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.message_status_attention {
+  background: red;
+  color: #fff;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.circus_container .circus_header {
+  text-align: center;
+  border-bottom: 1px solid gray;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.circus_container .circus_body {
+  padding: 20px 0;
+}
+
+.circus_container .circus_body .success_message {
+  text-align: center;
+  color: #fff;
+  padding: 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.circus_container .circus_body .message_status_error {
+  background-color: #e70000;
+}
+
+.circus_container .circus_body .message_status_success {
+  background-color: #69cf66;
+}
+
+.circus_container .circus_body form {
+  text-align: center;
+}
+
+.circus_container .circus_body form div, .circus_container .circus_body form p {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 20px 0;
+}
+
+.circus_container .circus_body form .inputTime {
+  width: 500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  position: relative;
+}
+
+.circus_container .circus_body form .inputTime input {
+  min-width: 140px;
+  margin: 0 10px;
+}
+
+.circus_container .circus_body form .inputTime .inputTimeRemove {
+  position: absolute;
+  right: -90px;
+  bottom: 0;
+}
+
+.circus_container .circus_body .yellow_message {
+  padding: 1px 0;
+  color: black;
+  background-color: #ffff6f;
+  margin-bottom: 10px;
+}
+
+.circus_container .circus_body .name_output_event, .circus_container .circus_body .output_event {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.circus_container .circus_body .name_output_event div, .circus_container .circus_body .output_event div {
+  width: 150px;
+  border: 1px solid black;
+  padding: 7px;
+  margin: 0 1px;
+}
+
+.circus_container .circus_body .name_output_event .fake_name_output_event, .circus_container .circus_body .output_event .fake_name_output_event {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.circus_container .circus_body .name_output_event {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.circus_container .circus_body .output_event_wrapper .output_event {
+  margin-top: 2px;
+}
+
+.circus_container .circus_body .output_event_wrapper .output_event a {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.circus_container .circus_body .output_event_wrapper .output_event div {
+  color: #000;
+}
+
+.circus_container .circus_body .output_event_wrapper .message_status_not_published {
+  background-color: #cf6666;
+  font-weight: bold;
+}
+
+.circus_container .circus_body .output_event_wrapper .message_status_published {
+  background-color: #69cf66;
+  font-weight: bold;
+}
+
+.circus_container .circus_body .output_event_wrapper .button_to_publish_event {
+  background-color: #c4ffad;
+}
+
+.circus_container .circus_body .output_event_wrapper .button_edit_event {
+  background-color: #fffaad;
+}
+
+.circus_container .circus_body .output_event_wrapper .button_remove_event {
+  background-color: #ffadad;
+}
+
+.circus_container .circus_body .output_event_wrapper .button_edit_event_group {
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+.circus_container .circus_body .output_event_wrapper .button_edit_event_group:hover {
+  background-color: #fff !important;
+}
+
+.circus_container .circus_body .circus_body_edit_event_block {
+  margin-bottom: 50px;
+}
+
+.circus_container .circus_body .circus_body_edit_event_block h4 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.circus_container .circus_body .circus_body_edit_event_block .input_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.circus_container .circus_body .circus_body_edit_event_block .input_price div {
+  width: 80px;
+  margin: 5px 5px;
+  font-weight: 400;
+}
+
+.circus_container .circus_body .circus_body_edit_event_block .edit_price_row {
+  width: 80px !important;
+  margin: 0 5px;
+}
+
+.circus_container .circus_body .circus_body_edit_event_block .select_stock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.circus_container .circus_body .circus_body_edit_event_block .select_stock div {
+  width: 65px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.return_to_home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.return_to_home .return_to_home_header {
+  margin-bottom: 20px;
+}
+
+.return_to_home button {
+  border: 1px solid black;
+  height: 30px;
+  border-radius: 5px;
+  margin: 0 20px;
+}
+
+.return_to_home .button_edit_event_group {
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+.return_to_home .button_edit_event_group:hover {
+  background-color: #fff !important;
+}
+
+.name_output_sold_event, .output_event_sold {
+  display: -ms-grid;
+  display: grid;
+  max-width: 1100px;
+  -ms-grid-columns: 150px 160px 100px 100px 100px 150px 1fr 0.5fr 0.5fr;
+      grid-template-columns: 150px 160px 100px 100px 100px 150px 1fr 0.5fr 0.5fr;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.name_output_sold_event div, .output_event_sold div {
+  border: 1px solid gray;
+  margin: 2px;
+  border-radius: 2px;
+  padding: 5px;
+  color: #000;
+}
+
+.name_output_sold_event .fake_name_column, .output_event_sold .fake_name_column {
+  border: none;
+}
+
+.name_output_sold_event div {
+  font-weight: bold;
+}
+
+.output_event_sold_wrapper .output_event_sold {
+  margin-top: 5px;
+}
+
+.output_event_sold_wrapper .output_event_sold div {
+  font-size: 14px;
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.output_event_sold_wrapper .output_event_sold .button_remove_buy_ticket {
+  background-color: #fa9a9a;
+  border: 1px solid #000;
+}
+
+.output_event_sold_wrapper .output_event_sold .button_remove_buy_ticket:hover {
+  background: none;
+}
+
+.circus_shapito_sold_search {
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.circus_body_instruction {
+  font-size: 16px;
+  font-weight: 600;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (1fr)[1fr];
+      grid-template-columns: repeat(1fr 1fr);
+}
+
+.circus_body_instruction img {
+  max-width: 1000px;
+  max-height: 1000px;
+}
+
+.circus_body_instruction .instruction {
+  margin-top: 100px;
+}
+
+.circus_body_instruction .instruction li {
+  color: red;
+}
+
+.circus_body_instruction .instruction li span {
+  color: #000;
+}
+
+.circus_body_instruction .two_instruction li {
+  color: #ffa600;
+}
+
+.circus_body_instruction .two_instruction li span {
+  color: #000;
+}
+
+.circus_body_instruction .three_instruction h2 {
+  text-align: center;
+  color: red;
+  line-height: 30px;
+}
+
+.circus_body_instruction .instruction_footer {
+  text-align: center;
+}
+
+.circus_body_instruction .instruction_footer a {
+  color: #319af0;
+}
+
+.circus_body_instruction .instruction_footer a:hover {
+  color: #000;
+}
+/*# sourceMappingURL=admin.css.map */

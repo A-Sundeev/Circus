@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+button {
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+#calendary_wrapper {
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    width: 50%;
+    max-width: 900px;
+    margin: 100px auto;
+    display: grid;
+    grid-auto-flow: row;
+    text-align: center;
+    
+    #section_year {
+        text-align: center;
+        margin: 5px 25px;
+        border: 1px solid gray;
+        border-radius: 5px;
+    }
+
+
+    #section_month {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1px;
+        text-align: center;
+        column-gap: 5px;
+        row-gap: 5px;
+        margin: 0 25px;
+        height: 40px;
+        
+        .current_month {
+            border: 1px solid gray;
+        }
+        div {
+            display: grid;
+            align-content: center;
+            border-radius: 5px;
+            position: relative;
+            button {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                max-height: 40px;
+                line-height: 4px;
+                border: 1px solid gray;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: rgba(255, 255, 255, 0.164);
+                border-color: #fff;
+                color: #fff;
+            }
+        }
+    }
+
+    #section_calendary {
+    
+        #days_of_week {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            text-align: center;
+            height: 40px;
+            column-gap: 5px;
+            row-gap: 5px;
+            margin: 5px 25px;
+
+            .days_of_week_item {
+                display: inherit;
+                align-content: center;
+                border-radius: 5px;
+                border: 1px solid gray;
+            }
+            
+        }
+
+        #days_of_month {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            text-align: center;
+            column-gap: 5px;
+            row-gap: 5px;
+            margin: 5px 25px;
+
+            .days_of_month_item {
+                position: relative;
+                width: 100%;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    padding-top: 100%;
+                }
+
+                button {
+                    position:  absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    border-radius: 5px;
+                    border: 1px solid gray;
+                    background: rgba(0, 0, 0, 0);
+                    color: #fff;
+                    font-weight: bold;
+                }
+                .active_date {
+                    color: #000;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+                .active_date:hover {
+                    background-color: rgba(255, 255, 255, 0.164);
+                    border-color: #fff;
+                    color: #fff;
+                }
+            }
+            
+            .fake_cell {
+                border: 1px solid gray;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    #calendary_wrapper {
+        width: 90%;
+    }
+}

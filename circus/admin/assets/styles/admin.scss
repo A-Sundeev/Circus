@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.message_status_attention {
+    background:red;
+    color: #fff;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.circus_container {
+    
+    .circus_header {
+        text-align: center;
+        border-bottom: 1px solid gray;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+    .circus_body {
+        padding: 20px 0;
+        .success_message {
+            text-align: center;
+            color: #fff;
+            padding: 15px 0;   
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        .message_status_error {
+            background-color: rgb(231, 0, 0);
+
+        }
+        .message_status_success {
+            background-color: rgb(105, 207, 102);
+        }
+        form {
+            text-align: center;
+            div, p {
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin: 20px 0;
+            }
+            .inputTime {
+                width: 500px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-evenly;
+                text-align: center;
+                position: relative;
+                input {
+                    min-width: 140px;
+                    margin: 0 10px;
+                }
+                .inputTimeRemove {
+                    position: absolute;
+                    right: -90px;
+                    bottom: 0;
+                }
+            }
+        }
+        
+        .yellow_message {
+            padding: 1px 0;
+            color: black;
+            background-color: rgb(255, 255, 111);
+            margin-bottom: 10px;
+        }
+        // вывод записей
+        .name_output_event, .output_event {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: center;
+            text-align: center;
+            div {
+                width: 150px;
+                border: 1px solid black;
+                padding: 7px;
+                margin: 0 1px;
+
+            }
+            .fake_name_output_event {
+                border: 1px solid rgba(0, 0, 0, 0);
+            }
+            
+        }
+        .name_output_event {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .output_event_wrapper {
+            .output_event {
+                margin-top: 2px;
+                a {
+                    height: 100%;
+                    display: grid;
+                }
+                div {
+                    color: #000;
+                }
+            }
+            
+            .message_status_not_published {
+                background-color:  rgb(207, 102, 102);
+                font-weight: bold;
+
+            }
+            .message_status_published {
+                background-color:rgb(105, 207, 102);
+                font-weight: bold;
+            }
+            
+            .button_to_publish_event {
+                background-color:rgb(196, 255, 173);
+            }
+            .button_edit_event {
+                background-color:rgb(255, 250, 173);
+
+
+            }
+            .button_remove_event {
+                background-color: rgb(255, 173, 173);
+            }
+            .button_edit_event_group {
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 100ms ease-in;
+                
+                &:hover {
+                    background-color: #fff !important;
+                }
+            }
+        }
+        
+        .circus_body_edit_event_block {
+            margin-bottom: 50px;
+            h4 {
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            .input_price {
+                display: flex;
+                margin: 0 auto;
+                justify-content: center;
+                div {
+                  width: 80px;
+                  margin: 5px 5px;
+                  font-weight: 400;
+                }
+            }
+            .edit_price_row {
+                width: 80px !important;
+                margin: 0 5px;
+            }
+            .select_stock {
+                display: flex;
+                margin: 0 auto;
+                justify-content: center;
+                div {
+                    width: 65px;
+                    font-weight: 400;
+                    margin: 0;
+                  }
+            }
+        }
+    }
+}
+
+.return_to_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    .return_to_home_header {
+        margin-bottom: 20px;
+    }
+    button {
+        border: 1px solid black;
+        height: 30px;
+        border-radius: 5px;
+        margin: 0 20px;
+
+    }
+    .button_edit_event_group {
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 100ms ease-in;
+        &:hover {
+            background-color: #fff !important;
+        }
+    }
+}
+
+
+.name_output_sold_event, .output_event_sold {
+    display: grid;
+    max-width: 1100px;
+    grid-template-columns: 150px 160px 100px 100px 100px 150px 1fr 0.5fr 0.5fr;
+    margin: 0 auto;
+    text-align: center;
+    div {
+        border: 1px solid gray;
+        margin: 2px;
+        border-radius: 2px;
+        padding: 5px;
+        color: #000;
+    }
+    .fake_name_column {
+        border: none;
+    }
+    
+}
+
+.name_output_sold_event {
+    div {
+        font-weight: bold;
+    }
+    
+}
+
+.output_event_sold_wrapper {
+    .output_event_sold {
+        margin-top: 5px;
+
+        div {
+            font-size: 14px;
+            background-color: #fff;
+            font-weight: 600;
+        }
+        .button_remove_buy_ticket {
+            background-color: rgb(250, 154, 154);
+            border:  1px solid #000;
+        }
+        .button_remove_buy_ticket:hover {
+            background: none;
+        }
+    }
+}
+.circus_shapito_sold_search {
+    max-width: 300px;
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.circus_body_instruction {
+    font-size: 16px;
+    font-weight: 600;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1fr 1fr);
+
+    img {
+        max-width: 1000px;
+        max-height: 1000px;
+    }
+
+    .instruction {
+        margin-top: 100px;
+        li {
+            color: red;
+            span {
+                color: #000;
+            }
+        }
+    }
+    .two_instruction {
+        li {
+            color: rgb(255, 166, 0);
+            span {
+                color: #000;
+            }
+        }
+    }
+    .three_instruction {
+        h2 {
+            text-align: center;
+            color: red;
+            line-height: 30px;
+        }
+    }
+    .instruction_footer {
+        text-align: center;
+
+        a {
+            color: rgb(49, 154, 240);
+        }
+        a:hover {
+            color: #000;
+        }
+    }
+}
