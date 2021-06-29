@@ -18,3 +18,6 @@ date_default_timezone_set('Europe/Moscow');
 
 Папку "includes" добавить в папку с темой
 Папку "circus" добавить в папку к плагинам
+
+![Image alt](https://github.com/A-Sundeev/Circus/raw/master/preview/calendary.png)
+![Image alt](https://github.com/A-Sundeev/Circus/raw/master/preview/dome.png)
